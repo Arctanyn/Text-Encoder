@@ -11,7 +11,7 @@ import SwiftUI
 struct Text_EncoderApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TextEncode()
         }
     }
 }

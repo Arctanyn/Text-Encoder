@@ -7,18 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9416271229BE3BBF003B1745 /* ShannonFanoCharValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9416271129BE3BBF003B1745 /* ShannonFanoCharValues.swift */; };
+		9416271429BE3C26003B1745 /* Double + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9416271329BE3C26003B1745 /* Double + Ext.swift */; };
+		9416271729BE52E9003B1745 /* ShannonFanoEncodeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9416271629BE52E9003B1745 /* ShannonFanoEncodeInfo.swift */; };
 		94A807A629BDE86600B8EE54 /* Text_EncoderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A807A529BDE86600B8EE54 /* Text_EncoderApp.swift */; };
-		94A807A829BDE86600B8EE54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A807A729BDE86600B8EE54 /* ContentView.swift */; };
 		94A807AA29BDE86700B8EE54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A807A929BDE86700B8EE54 /* Assets.xcassets */; };
 		94A807AD29BDE86700B8EE54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A807AC29BDE86700B8EE54 /* Preview Assets.xcassets */; };
+		94A807B829BDE91300B8EE54 /* TextEncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A807B729BDE91300B8EE54 /* TextEncode.swift */; };
+		94A807BB29BDEA0400B8EE54 /* TextEncodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A807BA29BDEA0400B8EE54 /* TextEncodeViewModel.swift */; };
+		94A807BF29BDEA7600B8EE54 /* EncodeMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A807BE29BDEA7600B8EE54 /* EncodeMethod.swift */; };
+		94A807C829BDF74300B8EE54 /* String + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A807C729BDF74300B8EE54 /* String + Ext.swift */; };
+		94A807CB29BDF77500B8EE54 /* ShannonFanoTextEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A807CA29BDF77500B8EE54 /* ShannonFanoTextEncoder.swift */; };
+		94A807CE29BE050C00B8EE54 /* ShannonFanoEncodedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A807CD29BE050C00B8EE54 /* ShannonFanoEncodedText.swift */; };
+		94A807D029BE05C800B8EE54 /* ShannonFanoEncodedTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A807CF29BE05C800B8EE54 /* ShannonFanoEncodedTextViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9416271129BE3BBF003B1745 /* ShannonFanoCharValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShannonFanoCharValues.swift; sourceTree = "<group>"; };
+		9416271329BE3C26003B1745 /* Double + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double + Ext.swift"; sourceTree = "<group>"; };
+		9416271629BE52E9003B1745 /* ShannonFanoEncodeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShannonFanoEncodeInfo.swift; sourceTree = "<group>"; };
 		94A807A229BDE86600B8EE54 /* Text-Encoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Text-Encoder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A807A529BDE86600B8EE54 /* Text_EncoderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_EncoderApp.swift; sourceTree = "<group>"; };
-		94A807A729BDE86600B8EE54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		94A807A929BDE86700B8EE54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94A807AC29BDE86700B8EE54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		94A807B729BDE91300B8EE54 /* TextEncode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEncode.swift; sourceTree = "<group>"; };
+		94A807BA29BDEA0400B8EE54 /* TextEncodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEncodeViewModel.swift; sourceTree = "<group>"; };
+		94A807BE29BDEA7600B8EE54 /* EncodeMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodeMethod.swift; sourceTree = "<group>"; };
+		94A807C729BDF74300B8EE54 /* String + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Ext.swift"; sourceTree = "<group>"; };
+		94A807CA29BDF77500B8EE54 /* ShannonFanoTextEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShannonFanoTextEncoder.swift; sourceTree = "<group>"; };
+		94A807CD29BE050C00B8EE54 /* ShannonFanoEncodedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShannonFanoEncodedText.swift; sourceTree = "<group>"; };
+		94A807CF29BE05C800B8EE54 /* ShannonFanoEncodedTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShannonFanoEncodedTextViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +50,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9416271529BE52CC003B1745 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9416271629BE52E9003B1745 /* ShannonFanoEncodeInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		94A8079929BDE86600B8EE54 = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +77,8 @@
 		94A807A429BDE86600B8EE54 /* Text-Encoder */ = {
 			isa = PBXGroup;
 			children = (
-				94A807A529BDE86600B8EE54 /* Text_EncoderApp.swift */,
-				94A807A729BDE86600B8EE54 /* ContentView.swift */,
-				94A807A929BDE86700B8EE54 /* Assets.xcassets */,
+				94A807B429BDE88F00B8EE54 /* Application */,
+				94A807B329BDE88200B8EE54 /* Supporting */,
 				94A807AB29BDE86700B8EE54 /* Preview Content */,
 			);
 			path = "Text-Encoder";
@@ -65,6 +90,112 @@
 				94A807AC29BDE86700B8EE54 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		94A807B329BDE88200B8EE54 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				94A807A929BDE86700B8EE54 /* Assets.xcassets */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		94A807B429BDE88F00B8EE54 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				94A807B529BDE89600B8EE54 /* AppFile */,
+				94A807C929BDF75800B8EE54 /* Service */,
+				9416271529BE52CC003B1745 /* Model */,
+				94A807C529BDEEAC00B8EE54 /* UI */,
+				94A807BC29BDEA6700B8EE54 /* Helper */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		94A807B529BDE89600B8EE54 /* AppFile */ = {
+			isa = PBXGroup;
+			children = (
+				94A807A529BDE86600B8EE54 /* Text_EncoderApp.swift */,
+			);
+			path = AppFile;
+			sourceTree = "<group>";
+		};
+		94A807B629BDE8A000B8EE54 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				94A807CC29BE04E800B8EE54 /* ShannonFanoCode */,
+				94A807B929BDE9D200B8EE54 /* TextEncode */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		94A807B929BDE9D200B8EE54 /* TextEncode */ = {
+			isa = PBXGroup;
+			children = (
+				94A807B729BDE91300B8EE54 /* TextEncode.swift */,
+				94A807BA29BDEA0400B8EE54 /* TextEncodeViewModel.swift */,
+			);
+			path = TextEncode;
+			sourceTree = "<group>";
+		};
+		94A807BC29BDEA6700B8EE54 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				94A807C629BDF73800B8EE54 /* Extension */,
+				94A807BD29BDEA6C00B8EE54 /* Enum */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		94A807BD29BDEA6C00B8EE54 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				94A807BE29BDEA7600B8EE54 /* EncodeMethod.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		94A807C429BDEEA700B8EE54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9416271129BE3BBF003B1745 /* ShannonFanoCharValues.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94A807C529BDEEAC00B8EE54 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				94A807B629BDE8A000B8EE54 /* Module */,
+				94A807C429BDEEA700B8EE54 /* View */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		94A807C629BDF73800B8EE54 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				94A807C729BDF74300B8EE54 /* String + Ext.swift */,
+				9416271329BE3C26003B1745 /* Double + Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		94A807C929BDF75800B8EE54 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				94A807CA29BDF77500B8EE54 /* ShannonFanoTextEncoder.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		94A807CC29BE04E800B8EE54 /* ShannonFanoCode */ = {
+			isa = PBXGroup;
+			children = (
+				94A807CD29BE050C00B8EE54 /* ShannonFanoEncodedText.swift */,
+				94A807CF29BE05C800B8EE54 /* ShannonFanoEncodedTextViewModel.swift */,
+			);
+			path = ShannonFanoCode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +268,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94A807A829BDE86600B8EE54 /* ContentView.swift in Sources */,
+				9416271429BE3C26003B1745 /* Double + Ext.swift in Sources */,
+				9416271729BE52E9003B1745 /* ShannonFanoEncodeInfo.swift in Sources */,
+				94A807D029BE05C800B8EE54 /* ShannonFanoEncodedTextViewModel.swift in Sources */,
+				94A807BF29BDEA7600B8EE54 /* EncodeMethod.swift in Sources */,
+				94A807CB29BDF77500B8EE54 /* ShannonFanoTextEncoder.swift in Sources */,
+				94A807BB29BDEA0400B8EE54 /* TextEncodeViewModel.swift in Sources */,
+				94A807C829BDF74300B8EE54 /* String + Ext.swift in Sources */,
+				94A807CE29BE050C00B8EE54 /* ShannonFanoEncodedText.swift in Sources */,
+				9416271229BE3BBF003B1745 /* ShannonFanoCharValues.swift in Sources */,
+				94A807B829BDE91300B8EE54 /* TextEncode.swift in Sources */,
 				94A807A629BDE86600B8EE54 /* Text_EncoderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,8 +413,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,6 +421,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.malildugulyubgov.Text-Encoder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -302,8 +444,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,6 +452,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.malildugulyubgov.Text-Encoder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
