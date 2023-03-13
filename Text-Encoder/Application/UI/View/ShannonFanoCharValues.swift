@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ShannonFanoCharValues: View {
     let charInfo: ShannonFanoCharInfo
-    private let roundingDigitNumber: Double = 100
+    private let roundingDigitNumber: Double = 10000
     
     var body: some View {
         VStack(alignment: .leading) {

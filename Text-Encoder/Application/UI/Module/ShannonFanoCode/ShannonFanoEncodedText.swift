@@ -40,6 +40,17 @@ struct ShannonFanoEncodedText: View {
                             ShannonFanoCharValues(charInfo: charInfo)
                                 .padding()
                         }
+                    } header: {
+                        Text("Characters info")
+                    }
+                    
+                    Section {
+                        ShannonFanoSummary(
+                            averagePiQi: viewModel.averagePiQi,
+                            averagePiLogPi: viewModel.averagePiLogPi
+                        )
+                    } header: {
+                        Text("Summary")
                     }
                 }
                 .scrollContentBackground(.hidden)

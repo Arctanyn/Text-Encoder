@@ -20,6 +20,7 @@
 		94A807CB29BDF77500B8EE54 /* ShannonFanoTextEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A807CA29BDF77500B8EE54 /* ShannonFanoTextEncoder.swift */; };
 		94A807CE29BE050C00B8EE54 /* ShannonFanoEncodedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A807CD29BE050C00B8EE54 /* ShannonFanoEncodedText.swift */; };
 		94A807D029BE05C800B8EE54 /* ShannonFanoEncodedTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A807CF29BE05C800B8EE54 /* ShannonFanoEncodedTextViewModel.swift */; };
+		94B3D04F29BEFBCD00C0AB29 /* ShannonFanoSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B3D04E29BEFBCD00C0AB29 /* ShannonFanoSummary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		94A807CA29BDF77500B8EE54 /* ShannonFanoTextEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShannonFanoTextEncoder.swift; sourceTree = "<group>"; };
 		94A807CD29BE050C00B8EE54 /* ShannonFanoEncodedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShannonFanoEncodedText.swift; sourceTree = "<group>"; };
 		94A807CF29BE05C800B8EE54 /* ShannonFanoEncodedTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShannonFanoEncodedTextViewModel.swift; sourceTree = "<group>"; };
+		94B3D04E29BEFBCD00C0AB29 /* ShannonFanoSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShannonFanoSummary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				9416271129BE3BBF003B1745 /* ShannonFanoCharValues.swift */,
+				94B3D04E29BEFBCD00C0AB29 /* ShannonFanoSummary.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				94A807CE29BE050C00B8EE54 /* ShannonFanoEncodedText.swift in Sources */,
 				9416271229BE3BBF003B1745 /* ShannonFanoCharValues.swift in Sources */,
 				94A807B829BDE91300B8EE54 /* TextEncode.swift in Sources */,
+				94B3D04F29BEFBCD00C0AB29 /* ShannonFanoSummary.swift in Sources */,
 				94A807A629BDE86600B8EE54 /* Text_EncoderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -28,6 +28,9 @@ final class ShannonFanoEncodedTextViewModel: ObservableObject {
     private lazy var textEncoder = ShannonFanoTextEncoder()
     @Published private(set) var charactersInfo: [ShannonFanoCharInfo] = []
     
+    @Published private(set) var averagePiQi: Double = 0
+    @Published private(set) var averagePiLogPi: Double = 0
+    
     //MARK: - Initialization
     
     init(messageText: String) {
@@ -67,6 +70,22 @@ private extension ShannonFanoEncodedTextViewModel {
             )
         }
         
+        let averagePiQi = await calculateAveragePiQi(from: shannonFanoInfo.PiQi)
+        let averagePLogP = await calculateAvaragePLogP(from: shannonFanoInfo.PLogP)
+        
+        await MainActor.run(body: {
+            self.averagePiQi = averagePiQi
+            self.averagePiLogPi = averagePLogP
+        })
+        
         return charInfo
+    }
+    
+    func calculateAveragePiQi(from PiQiDictionary: [Character: Double]) async -> Double {
+        return PiQiDictionary.reduce(0) { $0 + $1.value } / Double(PiQiDictionary.count)
+    }
+    
+    func calculateAvaragePLogP(from pLogPDictionary: [Character: Double]) async -> Double {
+        return pLogPDictionary.reduce(0.0) { $0 + (-$1.value * log2($1.value)) } / Double(pLogPDictionary.count)
     }
 }
