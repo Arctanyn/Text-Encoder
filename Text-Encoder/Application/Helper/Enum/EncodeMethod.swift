@@ -6,13 +6,13 @@
 //
 
 enum EncodeMethod: Identifiable, CaseIterable {
-    case shannonFanoSets
+    case shannonFano
     
     var id: Self { self }
     
     var title: String {
         switch self {
-        case .shannonFanoSets:
+        case .shannonFano:
             return "Shannon-Fano Method"
         }
     }

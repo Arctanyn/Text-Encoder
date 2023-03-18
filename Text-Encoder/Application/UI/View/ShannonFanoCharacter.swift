@@ -1,5 +1,5 @@
 //
-//  ShannonFanoCharValues.swift
+//  ShannonFanoCharacter.swift
 //  Text-Encoder
 //
 //  Created by Малиль Дугулюбгов on 12.03.2023.
@@ -7,16 +7,17 @@
 
 import SwiftUI
 
-struct ShannonFanoCharValues: View {
-    let charInfo: ShannonFanoCharInfo
+struct ShannonFanoCharacter: View {
+    let info: ShannonFanoCharacterInfo
     private let roundingDigitNumber: Double = 10000
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(charInfo.char != " " ? String(charInfo.char) : "Space")
-                .font(.largeTitle)
+            Text(info.char != " " ? String(info.char) : "Space")
+                .font(.title)
                 .fontWeight(.semibold)
                 .padding()
+            
             HStack(spacing: 20) {
                 Spacer()
                 VStack(alignment: .trailing, spacing: 10.0) {
@@ -32,16 +33,16 @@ struct ShannonFanoCharValues: View {
                 
                 VStack(alignment: .trailing, spacing: 10.0) {
                     Text(String(
-                        round(roundingDigitNumber * charInfo.probability) / roundingDigitNumber
+                        round(roundingDigitNumber * info.probability) / roundingDigitNumber
                     ))
                     
-                    Text(charInfo.code)
-                    Text(String(charInfo.codeLenght))
+                    Text(info.code)
+                    Text(String(info.codeLenght))
                     Text(String(
-                        round(roundingDigitNumber * charInfo.PiQi) / roundingDigitNumber
+                        round(roundingDigitNumber * info.PiQi) / roundingDigitNumber
                     ))
                     Text(String(
-                        round(roundingDigitNumber * charInfo.pLogP) / roundingDigitNumber
+                        round(roundingDigitNumber * info.pLogP) / roundingDigitNumber
                     ))
                 }
                 Spacer()
@@ -49,11 +50,12 @@ struct ShannonFanoCharValues: View {
             .font(.headline)
             .multilineTextAlignment(.trailing)
         }
+        .padding()
     }
 }
 
 struct ShannonFanoCharValues_Previews: PreviewProvider {
     static var previews: some View {
-        ShannonFanoCharValues(charInfo: .init(char: "A", probability: 0.28, code: "1111", codeLenght: 4, PiQi: 0.54, pLogP: 0.38))
+        ShannonFanoCharacter(info: .init(char: "A", probability: 0.28, code: "1111", codeLenght: 4, PiQi: 0.54, pLogP: 0.38))
     }
 }

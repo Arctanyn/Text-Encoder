@@ -14,8 +14,8 @@ extension String {
         return frequencies
     }
 
-    func findEachCharProbality(charFrequencies: [Character: Int]? = nil) -> [Character: Double] {
-        let frequencies = charFrequencies ?? self.findEachCharFrequency()
+    func findEachCharProbality() -> [Character: Double] {
+        let frequencies = self.findEachCharFrequency()
         var probalities = [Character: Double]()
         
         for (char, frequency) in frequencies {

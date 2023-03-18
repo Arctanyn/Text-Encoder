@@ -8,40 +8,39 @@
 import SwiftUI
 
 struct ShannonFanoSummary: View {
-    let averagePiQi: Double
-    let averagePiLogPi: Double
+    let q: Double
+    let h: Double
+    
     private let roundingDigitNumber: Double = 10000
+    
+    private var valuesAreEqual: Bool {
+        q.rounded() == h.rounded()
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             VStack(alignment: .leading) {
                 HStack {
-                    Text("Average Pi*Qi:")
+                    Text("Average q:")
                         .foregroundColor(.secondary)
-                    Text(String(round(roundingDigitNumber * averagePiQi) / roundingDigitNumber))
-                        .fontWeight(.semibold)
+                    Text(String(round(roundingDigitNumber * q) / roundingDigitNumber))
                 }
                 HStack {
-                    Text("Average -Pi*Log(Pi):")
+                    Text("Average H:")
                         .foregroundColor(.secondary)
-                    Text(String(round(roundingDigitNumber * averagePiLogPi) / roundingDigitNumber))
-                        .fontWeight(.semibold)
+                    Text(String(round(roundingDigitNumber * h) / roundingDigitNumber))
                 }
             }
             
-            if (round(10 * averagePiQi) / 10) == (round(10 * averagePiLogPi) / 10) {
-                Text("The code is optimal")
-            } else {
-                Text("The code is not optimal")
-            }
+            Text(valuesAreEqual ? "The code is optimal" : "The code is not optimal")
         }
-        .font(.title2)
+        .font(.headline)
         .padding()
     }
 }
 
 struct ShannonFanoSummary_Previews: PreviewProvider {
     static var previews: some View {
-        ShannonFanoSummary(averagePiQi: 0.5, averagePiLogPi: 0.51)
+        ShannonFanoSummary(q: 0.5, h: 0.51)
     }
 }

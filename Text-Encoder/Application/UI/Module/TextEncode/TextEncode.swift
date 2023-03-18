@@ -8,86 +8,87 @@
 import SwiftUI
 
 struct TextEncode: View {
-    @StateObject private var viewModel = TextEncodeViewModel()
     @State private var messageText = ""
-   
-    @State private var isEncodePresented = false
+    @State private var encodeMethod = EncodeMethod.shannonFano
+    
+    @State private var isEncodedPresented = false
+    @FocusState private var messageTextInFocus
     
     var body: some View {
-        ZStack {
-            Color(.secondarySystemBackground)
-                .ignoresSafeArea()
-            
+        NavigationStack {
             VStack {
                 Text("Text Encode")
-                    .font(.system(.largeTitle, design: .serif, weight: .bold))
-                    .padding(.top)
+                    .font(.system(.largeTitle, design: .serif, weight: .semibold))
                 
-                Divider()
-                
-                Picker(selection: $viewModel.encodeMethod) {
-                    ForEach(EncodeMethod.allCases) { encodeMethod in
-                        Text(encodeMethod.title)
-                    }
-                } label: {
-                    Text("Encode method")
+                Picker("Encode method", selection: $encodeMethod) {
+                    Text(encodeMethod.title)
                 }
                 .tint(.primary)
                 
-                VStack {
-                    MessageTextEdidor(
-                        text: $messageText,
-                        title: "Message Text"
+                Spacer()
+                
+                messageTextEditor
+                encodeButton
+            }
+            .padding()
+            .navigationDestination(isPresented: $isEncodedPresented) {
+                switch encodeMethod {
+                case .shannonFano:
+                    ShannonFanoEncode(
+                        viewModel: ShannonFanoEncodeViewModel(
+                            text: messageText
+                        )
                     )
-                    
-                    EncodeButton()
-                        .padding()
                 }
-                .padding()
+            }
+            .onAppear {
+                messageTextInFocus = true
             }
         }
-        
+        .tint(.primary)
     }
     
-    @ViewBuilder
-    private func EncodeButton() -> some View {
+    private var messageTextEditor: some View {
+        VStack {
+            Text("Message Text")
+                .foregroundColor(.secondary)
+                .font(.headline)
+            
+            TextEditor(text: $messageText)
+                .tint(.primary)
+                .scrollContentBackground(.hidden)
+        }
+        .padding()
+        .background(Color(.tertiarySystemFill))
+        .cornerRadius(10)
+        .focused($messageTextInFocus)
+        .toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+                Spacer()
+                Button("Done") {
+                    messageTextInFocus = false
+                }
+                .font(.headline)
+            }
+        }
+    }
+    
+    private var encodeButton: some View {
         Button {
-            isEncodePresented.toggle()
+            isEncodedPresented.toggle()
         } label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 10, style: .continuous)
                 Text("Encode")
                     .font(.headline)
-                    .foregroundColor(Color(.systemBackground))
+                    .foregroundColor(Color(.tertiarySystemBackground))
             }
+            .frame(height: 55)
+            .frame(maxWidth: .infinity)
         }
         .tint(.primary)
-        .frame(width: 150, height: 45)
         .disabled(!isEncodeButtonEnable)
-        .fullScreenCover(isPresented: $isEncodePresented) {
-            ShannonFanoEncodedText(
-                viewModel: ShannonFanoEncodedTextViewModel(
-                    messageText: messageText
-                )
-            )
-        }
-    }
-    
-    @ViewBuilder
-    private func MessageTextEdidor(text: Binding<String>, title: String) -> some View {
-        ZStack {
-            VStack(spacing: 0) {
-                Text(title)
-                    .font(.headline)
-                    .foregroundColor(.secondary)
-                    .padding(.top)
-                TextEditor(text: text)
-                    .tint(.primary)
-                    .padding()
-            }
-        }
-        .background()
-        .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+        .padding()
     }
 }
 

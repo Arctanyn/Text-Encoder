@@ -11,32 +11,18 @@ final class ShannonFanoTextEncoder {
     
     //MARK: - Methods
     
-    func encode(_ message: String) -> (encodedText: String, info: ShannonFanoEncodeInfo)? {
+    func encode(_ message: String) async -> (encodedText: String, info: ShannonFanoEncodeInfo)? {
         guard !message.isEmpty else { return nil }
         
-        let frequencies = message.findEachCharFrequency()
-        let probalities = message.findEachCharProbality(charFrequencies: frequencies)
+        let probalities = message.findEachCharProbality()
         let sortedProbalities = probalities.sorted { $0.value > $1.value }
             
         let codes = getCodes(probalities: sortedProbalities)
         
-        let codesDict = createCodeDict(with: codes)
-        let codeLenghts = calculateLenghts(of: codesDict)
+        let encodedMessage = convertMessageToCode(message, codes: codes)
+        let encodingInfo = provideEncodingInfo(with: codes, probalities: probalities)
         
-        let info = ShannonFanoEncodeInfo(
-            characterProbalities: probalities,
-            codes: codesDict,
-            codeLengths: codeLenghts,
-            PiQi: calculatePiQi(withProbalities: probalities, lenghts: codeLenghts),
-            PLogP: calculatePLogP(withProbalities: probalities)
-        )
-        
-        var encodedMessage = message
-        for code in codes {
-            encodedMessage = encodedMessage.replacingOccurrences(of: String(code.key), with: code.value)
-        }
-        
-        return (encodedMessage, info)
+        return (encodedMessage, encodingInfo)
     }
 }
 
@@ -45,9 +31,7 @@ final class ShannonFanoTextEncoder {
 private extension ShannonFanoTextEncoder {
     func getCodes(probalities: [Dictionary<Character, Double>.Element],
                   codes: [Dictionary<Character, String>.Element] = []) -> [Dictionary<Character, String>.Element] {
-        guard probalities.count > 1 else {
-            return codes
-        }
+        guard probalities.count > 1 else { return codes }
         
         var newCodes = codes
         
@@ -78,14 +62,37 @@ private extension ShannonFanoTextEncoder {
             }
         }
         
-        let topProbalities = Array(probalities[0..<index])
-        let bottomProbalities = Array(probalities[index..<probalities.count])
+        let topCharactersSet = Array(probalities[0..<index])
+        let bottomCharactersSet = Array(probalities[index..<probalities.count])
         
-        let topCodes = getCodes(probalities: topProbalities, codes: Array(newCodes[0..<index]))
-        let bottomCodes = getCodes(probalities: bottomProbalities, codes: Array(newCodes[index..<newCodes.count]))
+        let topCodes = getCodes(probalities: topCharactersSet, codes: Array(newCodes[0..<index]))
+        let bottomCodes = getCodes(probalities: bottomCharactersSet, codes: Array(newCodes[index..<newCodes.count]))
         
         return topCodes + bottomCodes
-        
+    }
+    
+    func convertMessageToCode(_ message: String, codes: [(Character, String)]) -> String {
+        var encodedMessage = message
+        for (character, code) in codes {
+            encodedMessage = encodedMessage.replacingOccurrences(
+                of: String(character),
+                with: code
+            )
+        }
+        return encodedMessage
+    }
+    
+    func provideEncodingInfo(with codes: [(Character, String)],
+                     probalities: [Character: Double]) -> ShannonFanoEncodeInfo {
+        let codesDict = createCodeDict(with: codes)
+        let codeLenghts = calculateLenghts(of: codesDict)
+        return ShannonFanoEncodeInfo(
+            characterProbalities: probalities,
+            codes: codesDict,
+            codeLengths: codeLenghts,
+            PiQi: calculatePiQi(withProbalities: probalities, lenghts: codeLenghts),
+            PLogP: calculatePLogP(withProbalities: probalities)
+        )
     }
     
     func createCodeDict(with codes: [(Character, String)]) -> [Character: String] {
