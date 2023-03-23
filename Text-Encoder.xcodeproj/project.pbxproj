@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9409B6E829C62C2100381E60 /* ShannonFanoCharacterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9409B6E729C62C2100381E60 /* ShannonFanoCharacterInfo.swift */; };
+		9409B6E829C62C2100381E60 /* CharacterCodeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9409B6E729C62C2100381E60 /* CharacterCodeInfo.swift */; };
 		9416271229BE3BBF003B1745 /* ShannonFanoCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9416271129BE3BBF003B1745 /* ShannonFanoCharacter.swift */; };
 		9416271429BE3C26003B1745 /* Double + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9416271329BE3C26003B1745 /* Double + Ext.swift */; };
 		9416271729BE52E9003B1745 /* ShannonFanoEncodeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9416271629BE52E9003B1745 /* ShannonFanoEncodeInfo.swift */; };
@@ -18,13 +18,17 @@
 		94A807BF29BDEA7600B8EE54 /* EncodeMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A807BE29BDEA7600B8EE54 /* EncodeMethod.swift */; };
 		94A807C829BDF74300B8EE54 /* String + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A807C729BDF74300B8EE54 /* String + Ext.swift */; };
 		94A807CB29BDF77500B8EE54 /* ShannonFanoTextEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A807CA29BDF77500B8EE54 /* ShannonFanoTextEncoder.swift */; };
-		94A807CE29BE050C00B8EE54 /* ShannonFanoEncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A807CD29BE050C00B8EE54 /* ShannonFanoEncode.swift */; };
+		94A807CE29BE050C00B8EE54 /* ShannonFanoCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A807CD29BE050C00B8EE54 /* ShannonFanoCode.swift */; };
 		94A807D029BE05C800B8EE54 /* ShannonFanoEncodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A807CF29BE05C800B8EE54 /* ShannonFanoEncodeViewModel.swift */; };
+		94A9CA5429CCB61A003CD905 /* HuffmanCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CA5329CCB61A003CD905 /* HuffmanCode.swift */; };
+		94A9CA5629CCB681003CD905 /* EncodeMethodTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CA5529CCB681003CD905 /* EncodeMethodTitle.swift */; };
+		94A9CA5829CCB96E003CD905 /* HuffmanCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CA5729CCB96E003CD905 /* HuffmanCodeViewModel.swift */; };
+		94A9CA5C29CCB9E4003CD905 /* EncodedTextInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CA5B29CCB9E4003CD905 /* EncodedTextInfo.swift */; };
 		94B3D04F29BEFBCD00C0AB29 /* ShannonFanoSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B3D04E29BEFBCD00C0AB29 /* ShannonFanoSummary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9409B6E729C62C2100381E60 /* ShannonFanoCharacterInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShannonFanoCharacterInfo.swift; sourceTree = "<group>"; };
+		9409B6E729C62C2100381E60 /* CharacterCodeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCodeInfo.swift; sourceTree = "<group>"; };
 		9416271129BE3BBF003B1745 /* ShannonFanoCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShannonFanoCharacter.swift; sourceTree = "<group>"; };
 		9416271329BE3C26003B1745 /* Double + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double + Ext.swift"; sourceTree = "<group>"; };
 		9416271629BE52E9003B1745 /* ShannonFanoEncodeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShannonFanoEncodeInfo.swift; sourceTree = "<group>"; };
@@ -36,8 +40,12 @@
 		94A807BE29BDEA7600B8EE54 /* EncodeMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodeMethod.swift; sourceTree = "<group>"; };
 		94A807C729BDF74300B8EE54 /* String + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Ext.swift"; sourceTree = "<group>"; };
 		94A807CA29BDF77500B8EE54 /* ShannonFanoTextEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShannonFanoTextEncoder.swift; sourceTree = "<group>"; };
-		94A807CD29BE050C00B8EE54 /* ShannonFanoEncode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShannonFanoEncode.swift; sourceTree = "<group>"; };
+		94A807CD29BE050C00B8EE54 /* ShannonFanoCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShannonFanoCode.swift; sourceTree = "<group>"; };
 		94A807CF29BE05C800B8EE54 /* ShannonFanoEncodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShannonFanoEncodeViewModel.swift; sourceTree = "<group>"; };
+		94A9CA5329CCB61A003CD905 /* HuffmanCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuffmanCode.swift; sourceTree = "<group>"; };
+		94A9CA5529CCB681003CD905 /* EncodeMethodTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodeMethodTitle.swift; sourceTree = "<group>"; };
+		94A9CA5729CCB96E003CD905 /* HuffmanCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuffmanCodeViewModel.swift; sourceTree = "<group>"; };
+		94A9CA5B29CCB9E4003CD905 /* EncodedTextInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodedTextInfo.swift; sourceTree = "<group>"; };
 		94B3D04E29BEFBCD00C0AB29 /* ShannonFanoSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShannonFanoSummary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				9416271629BE52E9003B1745 /* ShannonFanoEncodeInfo.swift */,
-				9409B6E729C62C2100381E60 /* ShannonFanoCharacterInfo.swift */,
+				9409B6E729C62C2100381E60 /* CharacterCodeInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -128,6 +136,7 @@
 			children = (
 				94A807B929BDE9D200B8EE54 /* TextEncode */,
 				94A807CC29BE04E800B8EE54 /* ShannonFanoCode */,
+				94A9CA5229CCB603003CD905 /* HuffmanCode */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -143,6 +152,7 @@
 		94A807BC29BDEA6700B8EE54 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				94A9CA5A29CCB9D1003CD905 /* Protocol */,
 				94A807C629BDF73800B8EE54 /* Extension */,
 				94A807BD29BDEA6C00B8EE54 /* Enum */,
 			);
@@ -162,6 +172,7 @@
 			children = (
 				9416271129BE3BBF003B1745 /* ShannonFanoCharacter.swift */,
 				94B3D04E29BEFBCD00C0AB29 /* ShannonFanoSummary.swift */,
+				94A9CA5529CCB681003CD905 /* EncodeMethodTitle.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,10 +206,27 @@
 		94A807CC29BE04E800B8EE54 /* ShannonFanoCode */ = {
 			isa = PBXGroup;
 			children = (
-				94A807CD29BE050C00B8EE54 /* ShannonFanoEncode.swift */,
+				94A807CD29BE050C00B8EE54 /* ShannonFanoCode.swift */,
 				94A807CF29BE05C800B8EE54 /* ShannonFanoEncodeViewModel.swift */,
 			);
 			path = ShannonFanoCode;
+			sourceTree = "<group>";
+		};
+		94A9CA5229CCB603003CD905 /* HuffmanCode */ = {
+			isa = PBXGroup;
+			children = (
+				94A9CA5329CCB61A003CD905 /* HuffmanCode.swift */,
+				94A9CA5729CCB96E003CD905 /* HuffmanCodeViewModel.swift */,
+			);
+			path = HuffmanCode;
+			sourceTree = "<group>";
+		};
+		94A9CA5A29CCB9D1003CD905 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				94A9CA5B29CCB9E4003CD905 /* EncodedTextInfo.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,14 +300,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9416271429BE3C26003B1745 /* Double + Ext.swift in Sources */,
+				94A9CA5829CCB96E003CD905 /* HuffmanCodeViewModel.swift in Sources */,
 				9416271729BE52E9003B1745 /* ShannonFanoEncodeInfo.swift in Sources */,
+				94A9CA5C29CCB9E4003CD905 /* EncodedTextInfo.swift in Sources */,
 				94A807D029BE05C800B8EE54 /* ShannonFanoEncodeViewModel.swift in Sources */,
-				9409B6E829C62C2100381E60 /* ShannonFanoCharacterInfo.swift in Sources */,
+				94A9CA5629CCB681003CD905 /* EncodeMethodTitle.swift in Sources */,
+				9409B6E829C62C2100381E60 /* CharacterCodeInfo.swift in Sources */,
 				94A807BF29BDEA7600B8EE54 /* EncodeMethod.swift in Sources */,
 				94A807CB29BDF77500B8EE54 /* ShannonFanoTextEncoder.swift in Sources */,
 				94A807C829BDF74300B8EE54 /* String + Ext.swift in Sources */,
-				94A807CE29BE050C00B8EE54 /* ShannonFanoEncode.swift in Sources */,
+				94A807CE29BE050C00B8EE54 /* ShannonFanoCode.swift in Sources */,
 				9416271229BE3BBF003B1745 /* ShannonFanoCharacter.swift in Sources */,
+				94A9CA5429CCB61A003CD905 /* HuffmanCode.swift in Sources */,
 				94A807B829BDE91300B8EE54 /* TextEncode.swift in Sources */,
 				94B3D04F29BEFBCD00C0AB29 /* ShannonFanoSummary.swift in Sources */,
 				94A807A629BDE86600B8EE54 /* Text_EncoderApp.swift in Sources */,

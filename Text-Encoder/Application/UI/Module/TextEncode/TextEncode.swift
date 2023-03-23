@@ -34,7 +34,7 @@ struct TextEncode: View {
             .navigationDestination(isPresented: $isEncodedPresented) {
                 switch encodeMethod {
                 case .shannonFano:
-                    ShannonFanoEncode(
+                    ShannonFanoCode(
                         viewModel: ShannonFanoEncodeViewModel(
                             text: messageText
                         )

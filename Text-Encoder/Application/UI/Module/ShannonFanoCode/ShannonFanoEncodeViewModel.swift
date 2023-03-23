@@ -8,16 +8,15 @@
 import Foundation
 import Combine
 
-final class ShannonFanoEncodeViewModel: ObservableObject {
+final class ShannonFanoEncodeViewModel: EncodedTextInfo {
     
     //MARK: Properties
     
-    @Published private(set) var encodedText = String()
+    @Published var encodedText: String = ""
+    @Published var charactersInfo: [CharacterCodeInfo] = []
     
-    @Published private(set) var charactersInfo: [ShannonFanoCharacterInfo] = []
-    
-    @Published private(set) var q: Double = 0
-    @Published private(set) var h: Double = 0
+    @Published var q: Double = 0
+    @Published var h: Double = 0
     
     private let text: String
     
@@ -45,9 +44,9 @@ final class ShannonFanoEncodeViewModel: ObservableObject {
 //MARK: - Private methods
 
 private extension ShannonFanoEncodeViewModel {
-    func createCharactersInfo(with shannonFanoInfo: ShannonFanoEncodeInfo) async -> [ShannonFanoCharacterInfo] {
+    func createCharactersInfo(with shannonFanoInfo: ShannonFanoEncodeInfo) async -> [CharacterCodeInfo] {
         let sortedCodes = shannonFanoInfo.codes.sorted(by: { $0.value.count < $1.value.count })
-        var charactersInfo = [ShannonFanoCharacterInfo]()
+        var charactersInfo = [CharacterCodeInfo]()
         
         for (character, code) in sortedCodes  {
             charactersInfo.append(

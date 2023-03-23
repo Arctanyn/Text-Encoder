@@ -1,5 +1,5 @@
 //
-//  ShannonFanoEncode.swift
+//  ShannonFanoCode.swift
 //  Text-Encoder
 //
 //  Created by Малиль Дугулюбгов on 12.03.2023.
@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct ShannonFanoEncode: View {
+struct ShannonFanoCode: View {
     @ObservedObject var viewModel: ShannonFanoEncodeViewModel
-    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         List {
-            Section {
-                Text("Shannon-Fano Method")
-                    .font(.system(.title, design: .serif, weight: .semibold))
+            Section() {
+                VStack(alignment: .center) {
+                    EncodeMethodTitle(method: .shannonFano)
+                }
             }
             .listRowBackground(Color.clear)
             Section("Encoded Text") {
@@ -35,9 +35,7 @@ struct ShannonFanoEncode: View {
                     h: viewModel.h
                 )
             }
-
         }
-        .navigationBarTitleDisplayMode(.inline)
         .task {
             await viewModel.encodeText()
         }
@@ -46,10 +44,12 @@ struct ShannonFanoEncode: View {
 
 struct EncodingSteps_Previews: PreviewProvider {
     static var previews: some View {
-        ShannonFanoEncode(
-            viewModel: ShannonFanoEncodeViewModel(
-                text: "Hello"
+        NavigationStack {
+            ShannonFanoCode(
+                viewModel: ShannonFanoEncodeViewModel(
+                    text: "Hello"
+                )
             )
-        )
+        }
     }
 }

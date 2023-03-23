@@ -5,7 +5,7 @@
 //  Created by Малиль Дугулюбгов on 18.03.2023.
 //
 
-struct ShannonFanoCharacterInfo: Hashable {
+struct CharacterCodeInfo: Hashable {
     let char: Character
     let probability: Double
     let code: String

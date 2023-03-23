@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ShannonFanoCharacter: View {
-    let info: ShannonFanoCharacterInfo
+    let info: CharacterCodeInfo
     private let roundingDigitNumber: Double = 10000
     
     var body: some View {
