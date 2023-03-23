@@ -7,6 +7,7 @@
 
 enum EncodeMethod: Identifiable, CaseIterable {
     case shannonFano
+    case huffman
     
     var id: Self { self }
     
@@ -14,6 +15,8 @@ enum EncodeMethod: Identifiable, CaseIterable {
         switch self {
         case .shannonFano:
             return "Shannon-Fano"
+        case .huffman:
+            return "Huffman"
         }
     }
 }

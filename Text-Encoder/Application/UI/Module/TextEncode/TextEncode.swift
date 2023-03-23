@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TextEncode: View {
     @State private var messageText = ""
-    @State private var encodeMethod = EncodeMethod.shannonFano
+    @State private var currentEncodeMethod = EncodeMethod.shannonFano
     
     @State private var isEncodedPresented = false
     @FocusState private var messageTextInFocus
@@ -20,8 +20,10 @@ struct TextEncode: View {
                 Text("Text Encode")
                     .font(.system(.largeTitle, design: .serif, weight: .semibold))
                 
-                Picker("Encode method", selection: $encodeMethod) {
-                    Text(encodeMethod.title)
+                Picker("Encode method", selection: $currentEncodeMethod) {
+                    ForEach(EncodeMethod.allCases) { encodeMethod in
+                        Text(encodeMethod.title)
+                    }
                 }
                 .tint(.primary)
                 
@@ -32,13 +34,13 @@ struct TextEncode: View {
             }
             .padding()
             .navigationDestination(isPresented: $isEncodedPresented) {
-                switch encodeMethod {
+                let textToEncode = messageText.trimmingCharacters(in: .whitespaces)
+                
+                switch currentEncodeMethod {
                 case .shannonFano:
-                    ShannonFanoCode(
-                        viewModel: ShannonFanoEncodeViewModel(
-                            text: messageText
-                        )
-                    )
+                    ShannonFanoCode(text: textToEncode)
+                case .huffman:
+                    HuffmanCode(text: textToEncode)
                 }
             }
             .onAppear {

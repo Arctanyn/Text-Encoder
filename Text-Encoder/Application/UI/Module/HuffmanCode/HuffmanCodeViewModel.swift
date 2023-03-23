@@ -1,25 +1,27 @@
 //
-//  ShannonFanoEncodeViewModel.swift
+//  HuffmanCodeViewModel.swift
 //  Text-Encoder
 //
-//  Created by Малиль Дугулюбгов on 12.03.2023.
+//  Created by Малиль Дугулюбгов on 23.03.2023.
 //
 
 import Foundation
-import Combine
 
-final class ShannonFanoEncodeViewModel: TextEncoder {
-    
+final class HuffmanCodeViewModel: TextEncoder {
+
     //MARK: Properties
     
     @Published var encodedText: String = ""
+    
+    @Published var characters: [Character] = []
     @Published var charactersInfo: [CharacterEncodeInfo] = []
+    @Published var charactersProbalitiesList: [[Double]] = []
     
     @Published var q: Double = 0
     @Published var h: Double = 0
     
     private let text: String
-    private let textEncoder = ShannonFanoTextEncoder()
+    private var textEncoder = HuffmanTextEncoder()
     
     //MARK: - Initialization
     
@@ -36,11 +38,16 @@ final class ShannonFanoEncodeViewModel: TextEncoder {
         async let averageQ = calculateAverageQ(from: result.info.PiQi)
         async let averagePLogP = calculateAvaragePLogP(from: result.info.PLogP)
         
+        let sortedCharacters = result.info.characterProbalities.sorted(by: { $0.value > $1.value }).map { $0.key }
+        let sortedProbalitiesList = result.probalitiesList.map { $0.sorted(by: >) }
         let summaryInfo = await (q: averageQ, h: averagePLogP)
-
+        
         await MainActor.run {
             encodedText = result.encodedText
             self.charactersInfo = charactersInfo
+            charactersProbalitiesList = result.probalitiesList
+            characters = sortedCharacters
+            charactersProbalitiesList = sortedProbalitiesList
             q = summaryInfo.q
             h = summaryInfo.h
         }

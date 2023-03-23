@@ -24,4 +24,15 @@ extension String {
         
         return probalities
     }
+    
+    func encoded(with codes: [Character: String]) -> Self {
+        var encodedText = self
+        for (character, code) in codes {
+            encodedText = encodedText.replacingOccurrences(
+                of: String(character),
+                with: code
+            )
+        }
+        return encodedText
+    }
 }

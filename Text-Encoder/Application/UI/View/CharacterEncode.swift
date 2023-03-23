@@ -1,5 +1,5 @@
 //
-//  ShannonFanoCharacter.swift
+//  CharacterEncode.swift
 //  Text-Encoder
 //
 //  Created by Малиль Дугулюбгов on 12.03.2023.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ShannonFanoCharacter: View {
-    let info: CharacterCodeInfo
+struct CharacterEncode: View {
+    let info: CharacterEncodeInfo
     private let roundingDigitNumber: Double = 10000
     
     var body: some View {
@@ -56,6 +56,6 @@ struct ShannonFanoCharacter: View {
 
 struct ShannonFanoCharValues_Previews: PreviewProvider {
     static var previews: some View {
-        ShannonFanoCharacter(info: .init(char: "A", probability: 0.28, code: "1111", codeLenght: 4, PiQi: 0.54, pLogP: 0.38))
+        CharacterEncode(info: .init(char: "A", probability: 0.28, code: "1111", codeLenght: 4, PiQi: 0.54, pLogP: 0.38))
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ShannonFanoSummary.swift
+//  EncodeSummary.swift
 //  Text-Encoder
 //
 //  Created by Малиль Дугулюбгов on 13.03.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ShannonFanoSummary: View {
+struct EncodeSummary: View {
     let q: Double
     let h: Double
     
@@ -41,6 +41,6 @@ struct ShannonFanoSummary: View {
 
 struct ShannonFanoSummary_Previews: PreviewProvider {
     static var previews: some View {
-        ShannonFanoSummary(q: 0.5, h: 0.51)
+        EncodeSummary(q: 0.5, h: 0.51)
     }
 }

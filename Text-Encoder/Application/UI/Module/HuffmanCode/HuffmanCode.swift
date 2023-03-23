@@ -1,26 +1,25 @@
 //
-//  ShannonFanoCode.swift
+//  HuffmanCode.swift
 //  Text-Encoder
 //
-//  Created by Малиль Дугулюбгов on 12.03.2023.
+//  Created by Малиль Дугулюбгов on 23.03.2023.
 //
 
 import SwiftUI
 
-struct ShannonFanoCode: View {
-    @StateObject private var viewModel: ShannonFanoEncodeViewModel
+struct HuffmanCode: View {
+    
+    @StateObject private var viewModel: HuffmanCodeViewModel
     
     init(text: String) {
-        _viewModel = StateObject(
-            wrappedValue: ShannonFanoEncodeViewModel(text: text)
-        )
+        _viewModel = StateObject(wrappedValue: HuffmanCodeViewModel(text: text))
     }
-    
+
     var body: some View {
         List {
             Section() {
                 VStack(alignment: .center) {
-                    EncodeMethodTitle(method: .shannonFano)
+                    EncodeMethodTitle(method: .huffman)
                 }
             }
             .listRowBackground(Color.clear)
@@ -28,6 +27,15 @@ struct ShannonFanoCode: View {
             Section("Encoded Text") {
                 Text(viewModel.encodedText)
                     .multilineTextAlignment(.leading)
+            }
+            
+            Section("Huffman Table") {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HuffmanTable(
+                        characters: viewModel.characters,
+                        charactersProbalityList: viewModel.charactersProbalitiesList
+                    )
+                }
             }
             
             Section("Characters Info") {
@@ -49,10 +57,8 @@ struct ShannonFanoCode: View {
     }
 }
 
-struct EncodingSteps_Previews: PreviewProvider {
+struct HuffmanCode_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
-            ShannonFanoCode(text: "Hello, World!")
-        }
+        HuffmanCode(text: "Hello, World!")
     }
 }
