@@ -8,6 +8,6 @@
 struct HuffmanEncode {
     let encodedText: String
     let info: TextEncodeInfo
-    let treeRootNode: BinaryTreeNode
+    let treeRootNode: HuffmanTreeNode
     let probalitiesList: [[Double]]
 }

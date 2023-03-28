@@ -98,7 +98,8 @@ struct TextEncode: View {
 
 private extension TextEncode {
     var isEncodeButtonEnable: Bool {
-        !messageText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+        let text = messageText.trimmingCharacters(in: .whitespacesAndNewlines)
+        return !text.isEmpty
     }
 }
 

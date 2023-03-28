@@ -11,6 +11,11 @@
 		9416271229BE3BBF003B1745 /* CharacterEncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9416271129BE3BBF003B1745 /* CharacterEncode.swift */; };
 		9416271429BE3C26003B1745 /* Double + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9416271329BE3C26003B1745 /* Double + Ext.swift */; };
 		9416271729BE52E9003B1745 /* TextEncodeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9416271629BE52E9003B1745 /* TextEncodeInfo.swift */; };
+		947DCA5B29CF7ACC00868F52 /* BinaryTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947DCA5A29CF7ACC00868F52 /* BinaryTreeNode.swift */; };
+		947DCA5D29CF7B3A00868F52 /* BinaryTreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947DCA5C29CF7B3A00868F52 /* BinaryTreeView.swift */; };
+		947DCA5F29CF7B5C00868F52 /* CollectDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947DCA5E29CF7B5C00868F52 /* CollectDict.swift */; };
+		947DCA6229CF7B8800868F52 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947DCA6129CF7B8800868F52 /* Line.swift */; };
+		947DCA6429CF7BA800868F52 /* UniqueValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947DCA6329CF7BA800868F52 /* UniqueValue.swift */; };
 		94A807A629BDE86600B8EE54 /* Text_EncoderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A807A529BDE86600B8EE54 /* Text_EncoderApp.swift */; };
 		94A807AA29BDE86700B8EE54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A807A929BDE86700B8EE54 /* Assets.xcassets */; };
 		94A807AD29BDE86700B8EE54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A807AC29BDE86700B8EE54 /* Preview Assets.xcassets */; };
@@ -25,7 +30,7 @@
 		94A9CA5829CCB96E003CD905 /* HuffmanCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CA5729CCB96E003CD905 /* HuffmanCodeViewModel.swift */; };
 		94A9CA5C29CCB9E4003CD905 /* TextEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CA5B29CCB9E4003CD905 /* TextEncoder.swift */; };
 		94A9CA5E29CCBCAC003CD905 /* HuffmanTextEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CA5D29CCBCAC003CD905 /* HuffmanTextEncoder.swift */; };
-		94A9CA6329CCBDE4003CD905 /* BinaryTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CA6229CCBDE4003CD905 /* BinaryTreeNode.swift */; };
+		94A9CA6329CCBDE4003CD905 /* HuffmanTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CA6229CCBDE4003CD905 /* HuffmanTreeNode.swift */; };
 		94A9CA6529CCBF2C003CD905 /* EncodeInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CA6429CCBF2C003CD905 /* EncodeInfoProvider.swift */; };
 		94A9CA6729CCC2B5003CD905 /* HuffmanEncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CA6629CCC2B5003CD905 /* HuffmanEncode.swift */; };
 		94A9CA6A29CCDB39003CD905 /* HuffmanTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CA6929CCDB39003CD905 /* HuffmanTable.swift */; };
@@ -37,6 +42,11 @@
 		9416271129BE3BBF003B1745 /* CharacterEncode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEncode.swift; sourceTree = "<group>"; };
 		9416271329BE3C26003B1745 /* Double + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double + Ext.swift"; sourceTree = "<group>"; };
 		9416271629BE52E9003B1745 /* TextEncodeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEncodeInfo.swift; sourceTree = "<group>"; };
+		947DCA5A29CF7ACC00868F52 /* BinaryTreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTreeNode.swift; sourceTree = "<group>"; };
+		947DCA5C29CF7B3A00868F52 /* BinaryTreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTreeView.swift; sourceTree = "<group>"; };
+		947DCA5E29CF7B5C00868F52 /* CollectDict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectDict.swift; sourceTree = "<group>"; };
+		947DCA6129CF7B8800868F52 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		947DCA6329CF7BA800868F52 /* UniqueValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueValue.swift; sourceTree = "<group>"; };
 		94A807A229BDE86600B8EE54 /* Text-Encoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Text-Encoder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A807A529BDE86600B8EE54 /* Text_EncoderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_EncoderApp.swift; sourceTree = "<group>"; };
 		94A807A929BDE86700B8EE54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,7 +62,7 @@
 		94A9CA5729CCB96E003CD905 /* HuffmanCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuffmanCodeViewModel.swift; sourceTree = "<group>"; };
 		94A9CA5B29CCB9E4003CD905 /* TextEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEncoder.swift; sourceTree = "<group>"; };
 		94A9CA5D29CCBCAC003CD905 /* HuffmanTextEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuffmanTextEncoder.swift; sourceTree = "<group>"; };
-		94A9CA6229CCBDE4003CD905 /* BinaryTreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTreeNode.swift; sourceTree = "<group>"; };
+		94A9CA6229CCBDE4003CD905 /* HuffmanTreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuffmanTreeNode.swift; sourceTree = "<group>"; };
 		94A9CA6429CCBF2C003CD905 /* EncodeInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodeInfoProvider.swift; sourceTree = "<group>"; };
 		94A9CA6629CCC2B5003CD905 /* HuffmanEncode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuffmanEncode.swift; sourceTree = "<group>"; };
 		94A9CA6929CCDB39003CD905 /* HuffmanTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuffmanTable.swift; sourceTree = "<group>"; };
@@ -75,10 +85,21 @@
 			children = (
 				9416271629BE52E9003B1745 /* TextEncodeInfo.swift */,
 				9409B6E729C62C2100381E60 /* CharacterEncodeInfo.swift */,
-				94A9CA6229CCBDE4003CD905 /* BinaryTreeNode.swift */,
+				94A9CA6229CCBDE4003CD905 /* HuffmanTreeNode.swift */,
 				94A9CA6629CCC2B5003CD905 /* HuffmanEncode.swift */,
+				947DCA5A29CF7ACC00868F52 /* BinaryTreeNode.swift */,
+				947DCA5E29CF7B5C00868F52 /* CollectDict.swift */,
+				947DCA6329CF7BA800868F52 /* UniqueValue.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		947DCA6029CF7B7F00868F52 /* Shape */ = {
+			isa = PBXGroup;
+			children = (
+				947DCA6129CF7B8800868F52 /* Line.swift */,
+			);
+			path = Shape;
 			sourceTree = "<group>";
 		};
 		94A8079929BDE86600B8EE54 = {
@@ -182,10 +203,12 @@
 		94A807C429BDEEA700B8EE54 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				947DCA6029CF7B7F00868F52 /* Shape */,
 				9416271129BE3BBF003B1745 /* CharacterEncode.swift */,
 				94B3D04E29BEFBCD00C0AB29 /* EncodeSummary.swift */,
 				94A9CA5529CCB681003CD905 /* EncodeMethodTitle.swift */,
 				94A9CA6929CCDB39003CD905 /* HuffmanTable.swift */,
+				947DCA5C29CF7B3A00868F52 /* BinaryTreeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,8 +341,11 @@
 				94A9CA6729CCC2B5003CD905 /* HuffmanEncode.swift in Sources */,
 				94A9CA5829CCB96E003CD905 /* HuffmanCodeViewModel.swift in Sources */,
 				9416271729BE52E9003B1745 /* TextEncodeInfo.swift in Sources */,
+				947DCA6229CF7B8800868F52 /* Line.swift in Sources */,
 				94A9CA5C29CCB9E4003CD905 /* TextEncoder.swift in Sources */,
+				947DCA6429CF7BA800868F52 /* UniqueValue.swift in Sources */,
 				94A807D029BE05C800B8EE54 /* ShannonFanoEncodeViewModel.swift in Sources */,
+				947DCA5F29CF7B5C00868F52 /* CollectDict.swift in Sources */,
 				94A9CA5629CCB681003CD905 /* EncodeMethodTitle.swift in Sources */,
 				9409B6E829C62C2100381E60 /* CharacterEncodeInfo.swift in Sources */,
 				94A9CA6529CCBF2C003CD905 /* EncodeInfoProvider.swift in Sources */,
@@ -330,11 +356,13 @@
 				9416271229BE3BBF003B1745 /* CharacterEncode.swift in Sources */,
 				94A9CA5429CCB61A003CD905 /* HuffmanCode.swift in Sources */,
 				94A807B829BDE91300B8EE54 /* TextEncode.swift in Sources */,
-				94A9CA6329CCBDE4003CD905 /* BinaryTreeNode.swift in Sources */,
+				94A9CA6329CCBDE4003CD905 /* HuffmanTreeNode.swift in Sources */,
 				94B3D04F29BEFBCD00C0AB29 /* EncodeSummary.swift in Sources */,
 				94A9CA6A29CCDB39003CD905 /* HuffmanTable.swift in Sources */,
 				94A9CA5E29CCBCAC003CD905 /* HuffmanTextEncoder.swift in Sources */,
+				947DCA5B29CF7ACC00868F52 /* BinaryTreeNode.swift in Sources */,
 				94A807A629BDE86600B8EE54 /* Text_EncoderApp.swift in Sources */,
+				947DCA5D29CF7B3A00868F52 /* BinaryTreeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

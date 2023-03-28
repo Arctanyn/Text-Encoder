@@ -1,35 +1,43 @@
 //
-//  BinaryTreeNode.swift
+//  TreeNodeDisplayModel.swift
 //  Text-Encoder
 //
-//  Created by Малиль Дугулюбгов on 23.03.2023.
+//  Created by Малиль Дугулюбгов on 25.03.2023.
 //
 
-import Foundation
-
-class BinaryTreeNode {
-    let character: Character?
-    let probality: Double
-    var left: BinaryTreeNode?
-    var right: BinaryTreeNode?
+class BinaryTreeNode<T>: Identifiable {
     
-    init(character: Character?,
-         probality: Double,
-         left: BinaryTreeNode? = nil,
-         right: BinaryTreeNode? = nil) {
-        self.character = character
-        self.probality = probality
+    //MARK: Properties
+    
+    var value: T
+    var left: BinaryTreeNode<T>?
+    var right: BinaryTreeNode<T>?
+    
+    var children: [BinaryTreeNode<T>] {
+        [left, right].compactMap { $0 }
+    }
+    
+    //MARK: - Initialization
+    
+    init(value: T, left: BinaryTreeNode<T>? = nil, right: BinaryTreeNode<T>? = nil) {
+        self.value = value
         self.left = left
         self.right = right
     }
 }
 
-extension BinaryTreeNode: Comparable {
-    static func < (lhs: BinaryTreeNode, rhs: BinaryTreeNode) -> Bool {
-        lhs.probality < rhs.probality
-    }
-    
-    static func == (lhs: BinaryTreeNode, rhs: BinaryTreeNode) -> Bool {
-        lhs.probality == rhs.probality
+//MARK: - Methods
+
+extension BinaryTreeNode {
+    func map<B>(_ transform: (T) -> B) -> BinaryTreeNode<B> {
+        let node = BinaryTreeNode<B>(value: transform(value))
+        
+        if let left, let right {
+            node.left = left.map(transform)
+            node.right = right.map(transform)
+
+        }
+        
+        return node
     }
 }

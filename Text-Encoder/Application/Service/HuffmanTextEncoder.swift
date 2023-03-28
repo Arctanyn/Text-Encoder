@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 struct HuffmanTextEncoder: EncodeInfoProvider {
     
     private var characterProbalitiesList: [[Double]] = []
@@ -37,9 +38,9 @@ struct HuffmanTextEncoder: EncodeInfoProvider {
 //MARK: - Private methods
 
 private extension HuffmanTextEncoder {
-    mutating func buildHuffmanTree(for charactersProbalities: [Character: Double]) -> BinaryTreeNode? {
+    mutating func buildHuffmanTree(for charactersProbalities: [Character: Double]) -> HuffmanTreeNode? {
         var nodes = charactersProbalities.map { character, probality in
-            BinaryTreeNode(character: character, probality: probality, left: nil, right: nil)
+            HuffmanTreeNode(character: character, probality: probality, left: nil, right: nil)
         }
         
         while nodes.count > 1 {
@@ -51,7 +52,7 @@ private extension HuffmanTextEncoder {
             
             let totalProbality = leftNode.probality + rightNode.probality
             
-            let parentNode = BinaryTreeNode(
+            let parentNode = HuffmanTreeNode(
                 character: nil,
                 probality: totalProbality,
                 left: leftNode,
@@ -64,7 +65,7 @@ private extension HuffmanTextEncoder {
         return nodes.first
     }
     
-    func buildCodes(node: BinaryTreeNode, code: String = String()) -> [Character: String] {
+    func buildCodes(node: HuffmanTreeNode, code: String = String()) -> [Character: String] {
         var codes = [Character: String]()
         
         if let character = node.character {
@@ -82,3 +83,4 @@ private extension HuffmanTextEncoder {
         return codes
     }
 }
+

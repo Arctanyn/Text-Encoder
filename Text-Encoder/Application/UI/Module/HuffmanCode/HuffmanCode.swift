@@ -10,6 +10,7 @@ import SwiftUI
 struct HuffmanCode: View {
     
     @StateObject private var viewModel: HuffmanCodeViewModel
+    @State private var isLoading = true
     
     init(text: String) {
         _viewModel = StateObject(wrappedValue: HuffmanCodeViewModel(text: text))
@@ -38,6 +39,16 @@ struct HuffmanCode: View {
                 }
             }
             
+            Section("Huffman Binary Tree") {
+                if let rootNode = viewModel.treeRoot {
+                    ScrollView(.horizontal) {
+                        BinaryTreeView(tree: rootNode) { nodeValue in
+                            treeNode(value: nodeValue.value)
+                        }
+                    }
+                }
+            }
+            
             Section("Characters Info") {
                 ForEach(viewModel.charactersInfo, id: \.self) { characterInfo in
                     CharacterEncode(info: characterInfo)
@@ -51,9 +62,27 @@ struct HuffmanCode: View {
                 )
             }
         }
+        .id(UUID())
         .task {
             await viewModel.encodeText()
         }
+    }
+    
+    private func treeNode(value: Double) -> some View {
+        Text(String(format: "%.3f", value))
+            .font(.headline)
+            .foregroundColor(Color(.systemBackground))
+            .frame(width: 60, height: 60)
+            .background(Circle().fill(.primary))
+            .padding(5)
+    }
+    
+    private func huffmanTree(rootNode: BinaryTreeNode<UniqueValue<Double>>) async -> some View {
+        let tree = BinaryTreeView(tree: rootNode) { value in
+            self.treeNode(value: value.value)
+        }
+        isLoading = false
+        return tree
     }
 }
 

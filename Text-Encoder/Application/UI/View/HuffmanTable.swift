@@ -28,12 +28,12 @@ struct HuffmanTable: View {
             
             ForEach(charactersProbalityList, id: \.self) { sublist in
                 VStack(spacing: 5) {
-                    ForEach(sublist, id: \.self) { value in
+                    ForEach(sublist.map(UniqueValue.init)) { value in
                         ZStack {
                             Rectangle()
                                 .fill(.secondary.opacity(0.2))
                                 .frame(width: 60, height: 50)
-                            Text(String(format: "%.3f", value))
+                            Text(String(format: "%.3f", value.value))
                                 .font(.headline)
                         }
                     }
