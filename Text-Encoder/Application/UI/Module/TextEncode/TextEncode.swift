@@ -34,7 +34,7 @@ struct TextEncode: View {
             }
             .padding()
             .navigationDestination(isPresented: $isEncodedPresented) {
-                let textToEncode = messageText.trimmingCharacters(in: .whitespaces)
+                let textToEncode = messageText.trimmingCharacters(in: .whitespacesAndNewlines)
                 
                 switch currentEncodeMethod {
                 case .shannonFano:
